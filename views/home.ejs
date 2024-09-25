@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 </head>
+<link rel="stylesheet" href="styles.css">
 <body>
 <%- include("partials/header"); -%>  
-    <h1>Home Page </h1>
-    <p><%= homeContent %></p>
-    <p><%= homeContent %></p>
+
+  <div class="body-content">
+   <%   posts.forEach(function(posts){  %>
+    <h1><%=posts.postTitle%></h1>
+    <p><%=posts.postContent%></p>
+   <%    });                            %>
+  </div> 
 <%- include("partials/footer"); -%> 
 </body>
 </html>

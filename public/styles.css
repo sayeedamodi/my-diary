@@ -4,15 +4,31 @@ html, body {
 }
 
 /* header--css--properties */
+.header {
+    background-color: rgb(234, 94, 0);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(234, 94, 0);
+}
 .navbar {
     padding: 20px;
     font-size: 20px;
+    justify-content: space-between;
 }
 .navbar-brand {
     font-size: 25px;
-    margin-left: 5px ;
+    margin-left: 10px ;
 }
 
+@media only screen and (max-width: 600px) {
+    .nav-brand-name {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+  }
 /* body--css--properties */
 body{
     display: flex;
@@ -20,8 +36,16 @@ body{
     min-height: 100vh;
 }
 
+.body-content{
+    margin: 15px 25px;
+}
+.navbar-nav li {
+    padding: 5px 15px ;
+}
 
-
+.compose-form {
+    margin: 40px 15px;
+}
 /* footer--css--properties */
 footer {
     margin-top: auto;
@@ -32,3 +56,4 @@ footer {
     margin-bottom: 0px;
     width: 100%;
 }
+
