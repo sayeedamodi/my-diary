@@ -22,13 +22,7 @@ nav {
     margin-left: 10px ;
 }
 
-@media only screen and (max-width: 600px) {
-    .nav-brand-name {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
-  }
+
 /* body--css--properties */
 body{
     display: flex;
@@ -38,6 +32,16 @@ body{
 
 .body-content{
     margin: 15px 25px;
+    padding: 10px;
+    background-color: rgb(255, 236, 210);
+    border-radius: 10px;
+}
+.body-content p{
+    font-size: 20px;
+    color: rgb(48, 46, 46);
+}
+.body-content .welcome {
+  color: rgb(89, 88, 88);
 }
 .navbar-nav li {
     padding: 5px 15px ;
@@ -57,3 +61,13 @@ footer {
     width: 100%;
 }
 
+@media only screen and (max-width: 600px) {
+    .nav-brand-name {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .body-content .welcome {
+        font-size: medium;
+    }
+  }

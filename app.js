@@ -1,10 +1,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
+const _ = require('lodash');
 
-const homeContent  = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus dignissim tristique. Vestibulum varius erat elit, in condimentum turpis tempor sed. Maecenas felis nisl, lacinia id felis vitae, bibendum laoreet nisi. Suspendisse justo justo, consectetur quis sapien sit amet, tempor hendrerit nisi. Ut ultrices fringilla auctor. Aliquam erat volutpat. Proin in tristique nisi.";
-const contactContent ="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus dignissim tristique. Vestibulum varius erat elit, in condimentum turpis tempor sed. Maecenas felis nisl, lacinia id felis vitae, bibendum laoreet nisi. Suspendisse justo justo, consectetur quis sapien sit amet, tempor hendrerit nisi. Ut ultrices fringilla auctor. Aliquam erat volutpat. Proin in tristique nisi.";
-const aboutContent =  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus dignissim tristique. Vestibulum varius erat elit, in condimentum turpis tempor sed. Maecenas felis nisl, lacinia id felis vitae, bibendum laoreet nisi. Suspendisse justo justo, consectetur quis sapien sit amet, tempor hendrerit nisi. Ut ultrices fringilla auctor. Aliquam erat volutpat. Proin in tristique nisi.";
+const homeContent  = " Welcome to My Personal Diary ✨";
+const aboutContent ="my personal diary";
+const contactContent ="sayeedamodix@gmail.com"
 
 var posts =[];
 
@@ -39,6 +40,22 @@ app.post("/compose", function(req,res){
    res.redirect("/");
 });
 
+app.get("/posts/:postName", function (req,res){
+   const requestedTitle = _.lowerCase(req.params.postName) ;
+   
+    console.log(`requested title is ${requestedTitle}`);
+
+   posts.forEach(function(post){
+    const storedTitle = _.lowerCase(post.postTitle);
+    console.log(`stored title are ${storedTitle}`);
+    if(storedTitle === requestedTitle) {
+        res.render("post",{
+            title: post.postTitle,
+            content: post.postContent
+        });
+    }
+   });
+});
 app.listen(3000, function(){
     console.log("server is running on port 3000");
 });

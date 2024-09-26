@@ -10,9 +10,10 @@
 <%- include("partials/header"); -%>  
 
   <div class="body-content">
+    <p class="welcome"><%=startingContent%> </p><hr>
    <%   posts.forEach(function(posts){  %>
     <h1><%=posts.postTitle%></h1>
-    <p><%=posts.postContent%></p>
+    <p><%=posts.postContent.substring(0,100)+ "..."%> <a href="posts/<%=posts.postTitle%>">Read more</a></p>
    <%    });                            %>
   </div> 
 <%- include("partials/footer"); -%> 
