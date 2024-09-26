@@ -8,9 +8,9 @@
 <link rel="stylesheet" href="styles.css">
 <body>
 <%- include("partials/header"); -%>  
-
+ 
   <div class="body-content">
-    <p class="welcome"><%=startingContent%> </p><hr>
+    <p class="welcome"><%=startingContent%>  <a href="/compose"> <button type="submit" class="btn btn-primary">Compose</button></a></p><hr>
    <%   posts.forEach(function(posts){  %>
     <h1><%=posts.postTitle%></h1>
     <p><%=posts.postContent.substring(0,100)+ "..."%> <a href="posts/<%=posts.postTitle%>">Read more</a></p>
