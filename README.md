@@ -44,7 +44,7 @@ A simple personal diary app built using **Node.js**, **Express.js**, **MongoDB**
 4. **Run the application:**
 
    ```bash
-   npm start
+   node app.js
    ```
 
    The application will be available at `http://localhost:3000`.
