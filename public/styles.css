@@ -43,6 +43,17 @@ body{
 .body-content .welcome {
   color: rgb(89, 88, 88);
 }
+
+.body-content .post button {
+    font-size: 1.5em;
+    background-color: #d6b09d;
+    border: solid 0px;
+    border-radius: 10px;
+    color: #2d3a45;
+}
+.body-content .post p {
+    padding: 10px 5px ;
+}
 .navbar-nav li {
     padding: 5px 15px ;
 }
