@@ -1,10 +1,18 @@
 <link rel="stylesheet" href="/styles.css">
+<script src="/scripts.js" defer></script>
+
 <%- include("partials/header"); -%>
  <div class="body-content">
+    <div id="spinner" style="display: none;">
+        <div class="spinner"></div>
+    </div>  
+ <a href="/posts">back to posts</a>
              <div class="post">
                  <button><%=title %></button>
                  <p><%= content %></p>
              </div>
-    
+      
      </div>
+     
+
 <%- include("partials/footer"); -%>

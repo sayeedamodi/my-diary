@@ -3,6 +3,76 @@ html, body {
    
 }
 
+/* public/styles.css */
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #ff5757;
+    color: #fff;
+}
+
+/* public/styles.css */
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-left-color: #09f;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.post {
+    opacity: 0;
+    transform: translateX(-50%);
+    animation: slideIn 0.5s forwards ease-in-out;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply a delay for each post */
+.post:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.post:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.post:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+
 /* header--css--properties */
 .header {
     background-color: rgb(234, 94, 0);

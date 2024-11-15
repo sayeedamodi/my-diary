@@ -1,14 +1,19 @@
    <link rel="stylesheet" href="/styles.css">
+   <script src="/scripts.js" defer></script>
    <%- include("partials/header"); -%>
     <div class="body-content">
         <p class="welcome">Welcome <%=user.name%>  <a href="/compose"> <button type="submit" class="btn btn-primary">Compose</button></a><a href="/logout"> <button type="submit" class="btn btn-secondary">logout</button></a></p><hr>
         
         <% if (userPosts.length > 0) { %>
             <% userPosts.forEach(function(post) { %>
+                <a href="/posts/<%= post.title %>">
                 <div class="post">
-                    <button><%= post.title %></button>
-                    <p><%= post.content %></p>
+                    
+                        <button><%= post.title %></button>
+                  
+                    <p><%= post.content.substring(0,100) %> ...  </p>
                 </div>
+            </a>
                 <hr><% }); %>
         <% } else { %>
             <p>No posts yet. Start by creating a new post!</p>
