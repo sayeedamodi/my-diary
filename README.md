@@ -1,4 +1,4 @@
-```
+
 # 📖 Personal Diary App 📝
 
 Welcome to the **Personal Diary App**! Write, manage, and secure your personal thoughts with ease. ✨
@@ -72,7 +72,7 @@ We are continuously improving the app, and we would love for you to join us in m
 
 ---
 
-```
+
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ```
